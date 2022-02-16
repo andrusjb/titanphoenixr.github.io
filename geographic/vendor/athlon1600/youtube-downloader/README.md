@@ -9,10 +9,7 @@
 This project was inspired by a very popular youtube-dl python package:  
 https://github.com/rg3/youtube-dl
 
-Yes, there are multiple other PHP-based youtube downloaders on the Internet, 
-but most of them haven't been updated in years, or they depend on youtube-dl itself.  
-
-Pure PHP-based youtube downloaders that work, and are **kept-up-to date** just do not exist.
+Yes, there are multiple PHP-based youtube downloaders on the Internet, but all of them haven't been updated in years or they depend on youtube-dl.
 
 This script does not depend on anything other than cURL. 
 No Javascript interpreters, no calls to shell... nothing but pure PHP with no heavy dependencies either.
@@ -21,46 +18,22 @@ No Javascript interpreters, no calls to shell... nothing but pure PHP with no he
 
 That's all there is to it!
 
+## :new: Update -- December 30, 2019!
 
-## :new: Latest Update -- February 9, 2020
+Finally figured it out. 
+As of right now, this is probably the only working 
+PHP-based youtube downloader out there.
 
-- Stream YouTube videos directly from your server:
-
-```php
-$youtube = new \YouTube\YouTubeStreamer();
-$youtube->stream('https://r4---sn-n4v7knll.googlevideo.com/videoplayback?...');
-```
-
-## Demo App
-
-- https://youtube-downloader3.herokuapp.com/
-
-![](http://proxynova.s3.amazonaws.com/youtube-downloader-save-video.png)
-
-
-### Deploy your own App
-
-on Heroku:
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-
-Create a FREE account first if you do not yet have one:  
-https://signup.heroku.com/
-
-
-Demo [deprecated]
+Demo
 ------
-
-> Too many people have abused this. I will be shutting it down soon. Spin this app on your own heroku account.
 
 Just to prove its reliability and the fact that it works even with YouTube videos that encrypt their signature, visit this URL:  
 
-https://api.unblockvideos.com/youtube_downloader?id=e-ORhEE9VVg&selector=mp4
-
+https://api.unblockvideos.com/youtube_downloader?id=e-ORhEE9VVg&selector=mp4&code=secret  
+  
 Or stream it directly:
 
-https://api.unblockvideos.com/youtube_downloader?id=e-ORhEE9VVg&selector=mp4&redirect=true
+https://api.unblockvideos.com/youtube_downloader?id=e-ORhEE9VVg&selector=mp4&redirect=true&code=secret
 
 ~~Works with Age-Restricted videos too~~  
 
@@ -74,13 +47,6 @@ Recommended way of installing this is via [Composer](http://getcomposer.org):
 ```bash
 composer require athlon1600/youtube-downloader
 ```
-
-Run locally:
-
-```bash
-php -S localhost:8000 -t vendor/athlon1600/youtube-downloader/public
-```
-
 
 # Usage
 
